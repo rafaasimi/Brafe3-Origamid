@@ -65,9 +65,20 @@ a {
     padding-left: 0px;
 }
 
+@media (max-width: 739px) {
+    .header-logo {
+        float: none;
+    }
+    .header-logo ul {
+        float: none;
+        margin-top: 10px;
+    }
+}
+
 /* Main */
 
 /* Com o display:flex no main-container, não é necessario mais clearfix */
+
 /* .main-container::after, .main-container::before {
     /* Permite somente os produtos flutuarem e não o footer 
     content: '';
@@ -139,10 +150,42 @@ a {
     background-position: 0 calc(-24px * 5);
 }
 
+@media (min-width: 740px) and (max-width: 980px) {
+    .side-nav {
+        width: 200px;
+    }
+}
+
+@media (max-width: 739px) {
+    .side-nav {
+        margin: 20px 0 0 20px;
+        background: none;
+        width: auto;
+    }
+    .side-nav li {
+        display: inline-block;
+    }
+    .side-nav li a::before {
+        display: block;
+        margin: 0px;
+        top: 0;
+    }
+    .side-nav li a {
+        width: 44px;
+        height: 44px;
+        overflow: hidden;
+        padding: 10px;
+        border: none;
+        color: #252525;
+        background: #252525;
+        border-radius: 4px;
+    }
+}
+
 /* Produtos */
 
 .produtos {
-     /* Com o display:flex o box já flutua a esquerda automaticamente */
+    /* Com o display:flex o box já flutua a esquerda automaticamente */
     /* float: left; */
     width: calc(100% - 300px);
     margin: 0 auto;
@@ -200,7 +243,7 @@ a {
     overflow: hidden;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 10px;
     background: url(../img/edit.svg) no-repeat;
 }
 
@@ -229,6 +272,33 @@ a {
     font-weight: bold;
     width: 70px;
     display: inline-block;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+    .produtos {
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 739px) {
+    .produtos {
+        width: 100%;
+    }
+    .produtos h1 {
+        float: none;
+    }
+    .adicionar-produtos {
+        float: none;
+        display: inline-block;
+        margin: 10px 0;
+    }
+    .produtos-item img {
+        float: none;
+    }
+    .produtos-item ul {
+        float: none;
+        width: 100%;
+    }
 }
 
 /* Footer */
